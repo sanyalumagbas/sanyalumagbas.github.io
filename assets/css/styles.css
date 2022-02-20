@@ -19,3 +19,8 @@
     color: #000000;
     text-decoration: none;
 }
+
+.highlight {
+  background-color:#586069;
+  margin:0 -8px; padding:0 8px;
+}
