@@ -27,12 +27,12 @@
 
 /*scroll to bottom*/
 
-html {
+.HTML {
   scroll-behavior: smooth;
 }
 
 /* Layout */
-main {
+.main {
   max-width: 700px;
   margin: 3rem auto;
   padding: 0 1rem;
@@ -42,11 +42,3 @@ main {
   font-weight: bold;
   color: black;
 }
-
-let scrollToBottom = document.querySelector('#scroll-to-bottom');
-let pageBottom = document.querySelector('#page-bottom');
-
-scrollToBottom.addEventListener('click', function () {
-
-  pageBottom.scrollIntoView();
-})
