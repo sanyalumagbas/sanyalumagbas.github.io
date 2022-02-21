@@ -25,4 +25,20 @@
   margin:0 -8px; padding:0 8px;
 }
 
-/* menu */
+/*scroll to bottom*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Layout */
+main {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+#scroll-to-bottom {
+  font-weight: bold;
+  color: black;
+}
