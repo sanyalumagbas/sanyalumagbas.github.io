@@ -29,16 +29,58 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+<style>
+                  .dropdown {
+                    position: relative;
+                    display: center;
+                  }
+
+                  .dropdown_item {
+                    display: none;
+                    position: absolute;
+                    background-color: solid white;
+                    min-width: 100%;
+
+                  }
+
+                  .dropdown_item a {
+                    display: block;
+                    color: #586069;
+                    padding: 10px;
+                    text-decoration: none;
+                    border-bottom:1px solid white;
+                  }
+
+                  .dropdown:hover .dropdown_item {
+                    display: block;
+                  }
+
+                  .dropdown_item a:hover {
+                     background-color: solid white
+                    }
+                  </style>
+
+                  <div class="dropdown">
                   <h4 class="noselect" style="font-family: Overpass, sans-serif;font-weight: bold;text-align: center;">
-                    scripted sanya </h4>
-                    <div class="btn-group btn-group-justified">
-                    <p class="noselect" style="font-family: 'Overpass Mono', monospace;color: black;text-align: center;">
-                        <a href="randomramblings.html" button type="submit" class="btn"> random ramblings </button>
-                        <a href="written works.html" button type="submit" class="btn"> written works </button>
-                        <a href="somehowsane.html" button type="submit" class="btn"> somehow sane </button>
-                        <a href="yourname.html" button type="submit" class="btn"> your/name </button>
+                    <span> scripted sanya </span> </h4>
+
+                    <div class="dropdown_item">
+                  <p class="noselect" style="font-family: 'Overpass Mono', monospace;color: black;text-align: center;">
+                    <a href="randomramblings.html" style="text-decoration:none;">random ramblings</a><br>
+                    <a href="written works.html" style="text-decoration:none;">written works</a><br>
+                    <a href="somehowsane.html" style="text-decoration:none;">somehow sane</a><br>
+                    <a href="yourname.html" style="text-decoration:none;">your/name</a></p>
                     </div>
                   </div>
+                </div>
+                  </div></div>
+            </div>
+        </div>
+    </div>
+
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;
 
 <div class="highlight">
     <script src="https://utteranc.es/client.js"
