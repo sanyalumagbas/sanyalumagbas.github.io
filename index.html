@@ -37,8 +37,7 @@
                         <a href="written works.html" button type="submit" class="btn"> written works </button>
                         <a href="somehowsane.html" button type="submit" class="btn"> somehow sane </button>
                         <a href="yourname.html" button type="submit" class="btn"> your/name </button>
-                    </div>
-                  </div>
+                    </div> </div>
 
 <div class="highlight">
     <script src="https://utteranc.es/client.js"
@@ -49,6 +48,44 @@
             crossorigin="anonymous"
             async> </div>
     </script>
+
+    <p class="noselect" style="font-family: 'Overpass Mono', monospace;color: white;text-align: center;" id="demo">
+
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 17 2064 10:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "I no longer have any such need, for the reason that I am dying every instant, and being born anew and without memories: alive and whole, no longer in myself, but in everything outside.";
+      }
+    }, 1000);
+    </script> </p>
+
+    &nbsp;&nbsp;
+
+  </div></div>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
