@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>sanya</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass+Mono&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg navigation-clean">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin: 10;">
+                <h4 class="noselect"  class="noselect"  style="font-family: Overpass, sans-serif;font-weight: bold;text-align: center;">editorial writing</h4>
+                 &nbsp;&nbsp;
+                <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center;">
+                    <div>
+                      <button>topic</button>
+                    </div>
+
+                      &nbsp;&nbsp;
+                      &nbsp;&nbsp;
+
+                    <div id="output"></div> </h>
+
+                    &nbsp;&nbsp;
+                    &nbsp;&nbsp;
+
+                    <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center">  <font size="+7">
+
+                 <script>
+                 function countdown(element, minutes, seconds) {
+             // set time for the particular countdown
+             var time = minutes*60 + seconds;
+             var interval = setInterval(function() {
+                 var el = document.getElementById('element');
+                 // if the time is 0 then end the counter
+                 if(time == 0) {
+                     setTimeout(function() {
+                         el.innerHTML = "Time's up!";
+                     }, 10);
+
+
+                     clearInterval(interval);
+
+                     setTimeout(function() {
+                         countdown('clock', 0, 3600);
+                     }, 2000);
+                 }
+                 var minutes = Math.floor( time / 60 );
+                 if (minutes < 10) minutes = "0" + minutes;
+                 var seconds = time % 60;
+                 if (seconds < 10) seconds = "0" + seconds;
+                 var text = minutes + ':' + seconds;
+                 el.innerHTML = text;
+                 time--;
+             }, 1000);
+             }
+             countdown('clock', 0, 3600);
+                 </script>
+             </head>
+
+             <body>
+                 <p id="element"> Ready, set, WRITE! </p>
+             </body>
+
+                    </font></h6>
+
+<h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center;">
+
+                    <p align="center">
+                      <button onclick="location.href='https://forms.gle/y1UA2niejt3tfuEe9'" type="button">
+                               submit</button></p> </h6>
+
+                    <script>
+                      var btn = document.querySelector("button");
+                      var out = document.getElementById("output");
+
+
+                      btn.addEventListener("click", getWord);
+
+                      function getWord(){
+
+
+                        var theWord= [
+                          'dog',
+                          'potato',
+                          'cow',
+                          'parrot',
+                          'stone',
+                          'watch',
+                           'house',
+                           'biolumonesance',
+                          'brake',
+                          'potato/salad',
+                          'trip',
+                          'hipopotomus',
+                          'mask',
+                          'chicken',
+                          'Pneumonoultramicroscopicsilicovolcanoconiosis',
+                        ];
+
+
+                        var wordNum = Math.floor(Math.random() * theWord.length);
+
+
+                        output.textContent = theWord[wordNum];
+                      }
+                  </script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
