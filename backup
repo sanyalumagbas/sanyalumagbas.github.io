@@ -28,61 +28,21 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-<style>
-                  .dropdown {
-                    position: relative;
-                    display: center;
-                  }
-
-                  .dropdown_item {
-                    display: none;
-                    position: absolute;
-                    background-color: solid white;
-                    min-width: 100%;
-
-                  }
-
-                  .dropdown_item a {
-                    display: block;
-                    color: #586069;
-                    padding: 10px;
-                    text-decoration: none;
-                    border-bottom:1px solid white;
-                  }
-
-                  .dropdown:hover .dropdown_item {
-                    display: block;
-                  }
-
-                  .dropdown_item a:hover {
-                     background-color: solid white
-                    }
-                  </style>
-
-                  <div class="dropdown">
-                  <h4 class="noselect" style="font-family: Overpass, sans-serif;font-weight: bold;text-align: center;">
-                    <span> scripted sanya </span> </h4>
-
-                    <div class="dropdown_item">
-                  <p class="noselect" style="font-family: 'Overpass Mono', monospace;color: black;text-align: center;">
-                    <a href="randomramblings.html" style="text-decoration:none;">random ramblings</a><br>
-                    <a href="written works.html" style="text-decoration:none;">written works</a><br>
-                    <a href="somehowsane.html" style="text-decoration:none;">somehow sane</a><br>
-                    <a href="yourname.html" style="text-decoration:none;">your/name</a></p>
+            <div class="col-md-12" align="center">
+                  <h4 style="font-family: Overpass, sans-serif;font-weight: bold;text-align: center;"> scripted sanya </h4>
+                    <div class="btn-group btn-group-justified">
+                    <p class="noselect" style="font-family: 'Overpass Mono', monospace;color: black;text-align: center;">
+                        <a href="randomramblings.html" button type="submit" class="btn"> random ramblings </a>
+                        <a href="written works.html" button type="submit" class="btn"> written works </a>
+                        <a href="somehowsane.html" button type="submit" class="btn"> somehow sane </a>
+                        <a href="yourname.html" button type="submit" class="btn"> your/name</a>
                     </div>
-                  </div>
-                </div>
-                  </div></div>
-            </div>
-        </div>
-    </div>
 
-&nbsp;&nbsp;
-&nbsp;&nbsp;
-&nbsp;&nbsp;
+
 
 <div class="highlight">
+    &nbsp;&nbsp
+    <p style="font-family: 'Overpass Mono', monospace;color: white;text-align: center;" id="scrollToBottom"> I've told you what's coming </p>
     <script src="https://utteranc.es/client.js"
             repo="scriptedsanya/scripted-sanya"
             issue-term="index"
@@ -91,6 +51,41 @@
             crossorigin="anonymous"
             async> </div>
     </script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <p class="noselect" style="font-family: 'Overpass Mono', monospace;color: white;text-align: center;" id="demo">
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 17 2064 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "I no longer have any such need, for the reason that I am dying every instant, and being born anew and without memories: alive and whole, no longer in myself, but in everything outside.";
+      }
+    }, 1000);
+    </script> </p>
+    <p class="noselect" style="font-family: 'Overpass Mono', monospace;color: white;text-align: center;" id="pageBottom"> The End </p>   &nbsp;&nbsp
+  </div></div></div>
+p
+    <script src="assets/bootstrap/js/bootstrap.min.js" id="pageBottom"></script>
 </body>
 </html>

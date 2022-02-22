@@ -25,13 +25,10 @@
   margin:0 -8px; padding:0 8px;
 }
 
-/*scroll to bottom*/
-
-.HTML {
+.html {
   scroll-behavior: smooth;
 }
 
-/* Layout */
 .main {
   max-width: 700px;
   margin: 3rem auto;
@@ -39,6 +36,5 @@
 }
 
 #scroll-to-bottom {
-  font-weight: bold;
-  color: black;
+  color: white;
 }
