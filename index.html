@@ -84,6 +84,15 @@
     </script> </p>
     <p id="page-bottom" class="noselect" style="font-family: 'Overpass Mono', monospace;color: white;text-align: center;" > The End </p> &nbsp;&nbsp
   </div></div></div>
+  <script type="text/javascript">// <![CDATA[
+    let scrollToBottom = document.querySelector('#scroll-to-bottom');
+    let pageBottom = document.querySelector('#page-bottom');
+
+    scrollToBottom.addEventListener('click', function () {
+
+        pageBottom.scrollIntoView();
+      })
+  // ]]></script>
     <script src="assets/bootstrap/js/bootstrap.min.js" ></script>
 </body>
 </html>
