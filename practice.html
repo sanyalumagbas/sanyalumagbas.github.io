@@ -32,18 +32,31 @@
                  &nbsp;&nbsp;
                 <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center;">
                     <div>
-                      <button>topic</button>
+                      <button onclick="randomSite()" target="_blank">topic</button>
                     </div>
 
                       &nbsp;&nbsp;
                       &nbsp;&nbsp;
 
-                    <div id="output"></div> </h>
+                      <script>
+                          var sites = [
+                              'http://www.google.com',
+                              'http://www.stackoverflow.com',
+                              'http://www.example.com',
+                              'http://www.youtube.com'
+                          ];
+
+                          function randomSite() {
+                              var i = parseInt(Math.random() * sites.length);
+                              location.href = sites[i];
+                          }
+                      </script>
+                      </h>
 
                     &nbsp;&nbsp;
                     &nbsp;&nbsp;
 
-                    <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center">  <font size="+7">
+                    <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center"><font size="+7">
 
                  <script>
                  function countdown(element, minutes, seconds) {
@@ -89,41 +102,6 @@
                       <button onclick="location.href='https://forms.gle/y1UA2niejt3tfuEe9'" type="button">
                                submit</button></p> </h6>
 
-                    <script>
-                      var btn = document.querySelector("button");
-                      var out = document.getElementById("output");
-
-
-                      btn.addEventListener("click", getWord);
-
-                      function getWord(){
-
-
-                        var theWord= [
-                          'dog',
-                          'potato',
-                          'cow',
-                          'parrot',
-                          'stone',
-                          'watch',
-                           'house',
-                           'biolumonesance',
-                          'brake',
-                          'potato/salad',
-                          'trip',
-                          'hipopotomus',
-                          'mask',
-                          'chicken',
-                          'Pneumonoultramicroscopicsilicovolcanoconiosis',
-                        ];
-
-
-                        var wordNum = Math.floor(Math.random() * theWord.length);
-
-
-                        output.textContent = theWord[wordNum];
-                      }
-                  </script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
