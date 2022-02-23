@@ -31,21 +31,42 @@
                 <h4 class="noselect"  class="noselect"  style="font-family: Overpass, sans-serif;font-weight: bold;text-align: center;">editorial writing</h4>
                  &nbsp;&nbsp;
                 <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center;">
-                    <div>
+
+                      <form method="post">
+                        <input type="button" name="B1" value="Random Link >>" onclick="randomlink()"> ctrl + click
+                        </form>
+
                       <button onclick="randomSite()"> ctrl + click </button>
 
-
-                    </div>
 
                       &nbsp;&nbsp;
                       &nbsp;&nbsp;
 
                       <script>
+
+                      var randomlinks = [];
+                      randomlinks[0]="http://ducksarethebest.com/";
+                      randomlinks[1]="http://cant-not-tweet-this.com/";
+                      randomlinks[2]="http://just-shower-thoughts.tumblr.com/";
+                      randomlinks[3]="http://www.fallingfalling.com/";
+                      randomlinks[4]="http://www.partridgegetslucky.com/";
+                      randomlinks[5]="http://ducksarethebest.com/";
+                      randomlinks[6]="http://cant-not-tweet-this.com/";
+                      randomlinks[7]="http://just-shower-thoughts.tumblr.com/";
+                      randomlinks[8]="http://www.fallingfalling.com/";
+                      randomlinks[9]="http://www.staggeringbeauty.com/";
+                      randomlinks[10]="http://www.trypap.com/";
+
+                      function randomlink(){
+                        window.open(randomlinks[Math.floor(Math.random()*randomlinks.length)]);
+                      }
+
                           var sites = [
-                              'http://www.google.com',
-                              'http://www.stackoverflow.com',
-                              'http://www.example.com',
-                              'http://www.youtube.com'
+                              'https://newsinfo.inquirer.net/1553370/comelec-advises-celebs-not-to-use-shows-platforms-to-endorse-candidates#ixzz7LfUEsWfC',
+                              'https://www.rappler.com/moveph/online-personalities-celebrities-redefine-being-influencer-yearend-2020/',
+                              'https://www.manilatimes.net/2022/02/22/news/govt-mulls-transition-into-new-normal-against-covid-19/1833853',
+                              'https://r3.rappler.com/nation/48232-batangas-climate-adaptation-study'
+                              'https://www.bworldonline.com/dynasties-celebrities-dominate-circus-of-philippine-elections/'
                           ];
 
                           function randomSite() {
