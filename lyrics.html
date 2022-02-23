@@ -31,11 +31,12 @@
             <div class="col-md-12" style="margin: 10;">
                 <h4 class="noselect"  class="noselect"  style="font-family: Overpass, sans-serif;font-weight: bold;text-align: center;">lyrics</h4>
                  &nbsp;&nbsp;
-                <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center;"><a onclick="javascript:ShowHide('one')">Aura | GhostandPals</a></h6>
-                <br> <br> <br>
+                <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center;"><a onclick="javascript:ShowHide('one')">Aura | GhostandPals</a></h6> &nbsp;&nbsp
             <div class="mid" id="one" style="display: none;">
-
-                <p class="song show-chords" style="font-family: 'Overpass Mono', monospace;text-align: center;">
+              <div id="section1">
+<div class="butmid"><a href="#section2"><button> autoscroll down </button></a></div>
+&nbsp; &nbsp
+<p class="song show-chords" style="font-family: 'Overpass Mono', monospace;text-align: center;">
 
 <span class="chord">Am</span>Barely printed, on the dot <br> <br> She wondered why the <span class="chord">F</span>record stopped <br> <br>
 <span class="chord">Am</span>Flipping through the pages of a <span class="chord">F</span>child's eulogy<br><br><br>
@@ -57,16 +58,18 @@ A <span class="chord">Am</span>girl preserved throughout the years<br> <br>
 Repainted in the prism <span class="chord">F</span>past<br> <br>
 We're holding hands at <span class="chord">Dm</span>long last<br><br><br>
 
-<span class="chord">Dm</span> Fortified by <span class="chord">F</span>age-old condolences<br> <br>
+<span class="chord">Dm</span>Fortified by <span class="chord">F</span>age-old condolences<br> <br>
 Drawings of the northern lights<br> <br>
-<span class="chord">Gm</span> God, give us clearer skies<br><br><br>
+<span class="chord">Gm</span>God, give us clearer skies<br><br><br>
 
-<span class="chord">Dm</span> Open-eyed, en<span class="chord">F</span>tangled in promises<br> <br>
+<span class="chord">Dm</span>Open-eyed, en<span class="chord">F</span>tangled in promises<br> <br>
 Furthering the questions asked<br> <br>
-<span class="chord">Gm</span> Hands tied behind our backs<br> <br>
-<span class="chord">Dm</span> Bared fangs behind a mask<br><br><br>
+<span class="chord">Gm</span>Hands tied behind our backs<br> <br>
+<span class="chord">Dm</span>Bared fangs behind a mask<br><br><br>
 
-
+<div id="section2">
+<div class="butmid"><a href="#section1"><button> autoscroll up </button></a></div></div>
+</div></div></div>
                   </p></p>
 
 
@@ -87,6 +90,33 @@ else
 document.getElementById(divId).style.display = 'none';
 }
 }
+// ]]></script>
+
+<script type="text/javascript">// <![CDATA[
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 // ]]></script>
             </div>
         </div>
