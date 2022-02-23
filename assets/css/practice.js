@@ -1,12 +1,4 @@
-var quotes = [
-
-
-
-
-
-]
-
-function newQuote() {
-  var randomNumber = Math.floor(Math.random () * (quotes.length));
-  document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
-}
+window.open(
+  'https://google.com',
+  '_blank' // <- This is what makes it open in a new window.
+);
