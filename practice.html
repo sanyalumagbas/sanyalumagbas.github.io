@@ -42,7 +42,7 @@
 
                       <script>
                           var sites = [
-                              'http://www.google.com',
+                              'http://scriptedsanya.me/source1.html',
                               'http://www.stackoverflow.com',
                               'http://www.example.com',
                               'http://www.youtube.com'
@@ -57,52 +57,6 @@
 
                     &nbsp;&nbsp;
                     &nbsp;&nbsp;
-
-                    <h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center"><font size="+7">
-
-                 <script>
-                 function countdown(element, minutes, seconds) {
-             // set time for the particular countdown
-             var time = minutes*60 + seconds;
-             var interval = setInterval(function() {
-                 var el = document.getElementById('element');
-                 // if the time is 0 then end the counter
-                 if(time == 0) {
-                     setTimeout(function() {
-                         el.innerHTML = "Time's up!";
-                     }, 10);
-
-
-                     clearInterval(interval);
-
-                     setTimeout(function() {
-                         countdown('clock', 0, 3600);
-                     }, 2000);
-                 }
-                 var minutes = Math.floor( time / 60 );
-                 if (minutes < 10) minutes = "0" + minutes;
-                 var seconds = time % 60;
-                 if (seconds < 10) seconds = "0" + seconds;
-                 var text = minutes + ':' + seconds;
-                 el.innerHTML = text;
-                 time--;
-             }, 1000);
-             }
-             countdown('clock', 0, 3600);
-                 </script>
-             </head>
-
-             <body>
-                 <p id="element"> Ready, set, WRITE! </p>
-             </body>
-
-                    </font></h6>
-
-<h6 class="noselect"  style="font-family: 'Overpass Mono', monospace;font-weight: bold;text-align: center;">
-
-                    <p align="center">
-                      <button onclick="location.href='https://forms.gle/y1UA2niejt3tfuEe9'" type="button">
-                               submit</button></p> </h6>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
