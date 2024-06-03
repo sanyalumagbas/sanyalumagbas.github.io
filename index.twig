@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+
+		{% if meta.description %}
+			<meta name="description" content="{{ meta.description|striptags }}" />
+		{% endif %}
+		{% if meta.robots %}
+			<meta name="robots" content="{{ meta.robots }}" />
+		{% endif %}
+
+		{% if current_page %}
+			<link rel="canonical" href="{{ current_page.url }}" />
+		{% endif %}
+
+		<link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
+	</head>
+
+
+	<body class="{% if current_page.id == "index" %}blog{% endif %}">
+		<header>
+			<h1><a href="{{ "index"|link }}">{{ site_title }}</a></h1>
+			<nav role="region" tabindex="-1">
+				<ul>
+					{% for page in pages if page.title and not page.hidden %}
+						{% set page_depth = page.id|split('/')|length %}
+						{% if ((page_depth == 2) and (page.id ends with "/index") or (page_depth == 1 and (current_page.id != page.id or current_page.id != "index"))) %}
+							<li{% if page.id == current_page.id %} class="active"{% endif %}>
+								<a href="{{ page.url }}">{{ page.title }}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</nav>
+		</header>
+		{% if current_page.id ends with "index" %}
+		{% set current_tag = current_page.id|split('/')[0] %}
+			<main class="blog">
+				{{ content }}
+				<ul>
+					{% for page in pages|sort_by("time")|reverse if page.title and not page.hidden %}
+						{% set page_depth = page.id|split('/')|length %}
+						{% set page_tag = page.id|split('/')[0] %}
+						{#
+							  * display all pages in subfolders (depth: 2), that are not index pages for their subfolder (do not end with "index)
+							  * display pages of all tags on the start page (current_page.id: "index")
+							  * else display only the tag of the current index
+							  * do not display pages from the archive (page_tag: "archive") on the start page
+						#}
+						{% if page_depth == 2 and (current_page.id == "index" or page_tag == current_tag) and not (page.id ends with "index") and not (page_tag == "archive" and current_page.id == "index") %}
+							<li>
+								<a href="{{ page.url }}">/ {{ page.date_formatted }} / {% if current_page.id == "index" %}{{ page_tag }} / {% endif %}{{ page.title }}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</main>
+		{% else %}
+			<main>
+			<header>
+				{% set page_depth = current_page.id|split('/')|length %}
+				<h1>{{ meta.title }}</h1>
+				{% if page_depth > 1 %}
+					({{ meta.date_formatted }}, {{ meta.author }})
+				{% endif %}
+			</header>
+			{{ content }}
+			</main>
+		{% endif %}
+	</body>
+</html>
